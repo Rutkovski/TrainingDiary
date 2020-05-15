@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HomeActivity">
+
+    <item
+        android:id="@+id/item_settings"
+        android:orderInCategory="100"
+        android:title="Настройки"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/item_contact_the_developer"
+        android:orderInCategory="100"
+        android:title="Написать разрабочику"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/item_about_app"
+        android:orderInCategory="100"
+        android:title="О приложении"
+        app:showAsAction="never"/>
+
+
+</menu>

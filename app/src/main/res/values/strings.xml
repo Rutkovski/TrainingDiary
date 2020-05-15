@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">TrainingDiary</string>
+    <string name="button_add_training">СОХРАНИТЬ</string>
+    <string name="duration">Сколько времени заняло?</string>
+    <string name="radioButton_hard">Сложно</string>
+    <string name="radiobutton_normal">Нормально</string>
+    <string name="radiobutton_easy">Легко</string>
+    <string name="textview_question">Какой был уровень нагрузки?</string>
+    <string name="hint_add_description">Введите описание тренировки:</string>
+    <string name="edit_text_when">Когда была тренировка?</string>
+    <string name="hint_title">Название тренировки:</string>
+    <string name="training_duration">%dч. %02dмин.</string>
+    <string name="warning_title">Заполните название тренировки!</string>
+    <string name="lvl_easy">Сложность: легко</string>
+    <string name="lvl_medium">Сложность: нормально</string>
+    <string name="lvl_hard">Сложность: тяжело</string>
+    <string name="warning_delete">Удалить данные от тренировке?</string>
+    <string name="confirmation_of_deletion">Подтверждение удаления</string>
+    <string name="yes">да</string>
+    <string name="no">нет</string>
+    <string-array name="level_default">
+        <item>Легко</item>
+        <item>Сложно</item>
+        <item>Нормально</item>
+    </string-array>
+
+
+</resources>

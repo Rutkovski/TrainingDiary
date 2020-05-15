@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <com.demo.trainingdiary.NumberPickerPref
+            android:key="key_number"
+            android:title="Длительность тренировки"
+            android:summary="Изменить длительность тренировки по умолчанию, мин"
+            android:defaultValue="30">
+    </com.demo.trainingdiary.NumberPickerPref>
+
+
+
+</PreferenceScreen>
