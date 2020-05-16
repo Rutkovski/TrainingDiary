@@ -10,14 +10,11 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.NumberPicker;
 
-
 public class NumberPickerPref extends DialogPreference {
 
     public static final int MAX_VALUE = 180;
     public static final int MIN_VALUE = 10;
-
     public static final boolean WRAP_SELECTOR_WHEEL = true;
-
 
     private NumberPicker picker;
     private int value;
@@ -29,7 +26,6 @@ public class NumberPickerPref extends DialogPreference {
     public NumberPickerPref(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
-
 
     @Override
     protected View onCreateDialogView() {
@@ -57,7 +53,6 @@ public class NumberPickerPref extends DialogPreference {
     }
 
 
-
     @Override
     protected void onDialogClosed(boolean positiveResult) {
         if (positiveResult) {
@@ -75,22 +70,18 @@ public class NumberPickerPref extends DialogPreference {
         return a.getInt(index, MIN_VALUE);
     }
 
-
     @Override
     protected void onSetInitialValue(boolean restorePersistedValue, Object defaultValue) {
         setValue(restorePersistedValue ? getPersistedInt(MIN_VALUE) : (Integer) defaultValue);
     }
 
-
+    public int getValue() {
+        return this.value;
+    }
 
     public void setValue(int value) {
         this.value = value;
         persistInt(this.value);
-    }
-
-
-    public int getValue() {
-        return this.value;
     }
 }
 
