@@ -15,7 +15,6 @@ import java.util.List;
 
 public class DialogRemove extends DialogFragment {
 
-
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
@@ -36,7 +35,6 @@ public class DialogRemove extends DialogFragment {
             }
         })
         ;
-
 
         return builder.create();
     }

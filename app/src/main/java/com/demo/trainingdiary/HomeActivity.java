@@ -13,10 +13,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-public class HomeActivity extends AppCompatActivity {
-
-
-
+public abstract class HomeActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -24,8 +21,6 @@ public class HomeActivity extends AppCompatActivity {
         inflater.inflate(R.menu.menu_main,menu);
         return super.onCreateOptionsMenu(menu);
     }
-
-
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -37,24 +32,18 @@ public class HomeActivity extends AppCompatActivity {
                 break;
             case (R.id.item_about_app):
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("TrainingDiary");
-                builder.setMessage("version.0.3\n15.05.2020");
+                builder.setTitle(getString(R.string.about_title_app));
+                builder.setMessage(getString(R.string.about_app_version));
                 AlertDialog dialog = builder.create();
                 dialog.show();
-
                 break;
             case (R.id.item_contact_the_developer):
-
                 Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
-                emailIntent.setData(Uri.parse("mailto:rutkovski.dp@gmail.com"));
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "TrainingsDiary");
+                emailIntent.setData(Uri.parse(getString(R.string.feedback_email)));
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, R.string.about_title_app);
                 if (emailIntent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(Intent.createChooser(emailIntent, "Send feedback"));
-                }else {
-                    Log.i("Test","Hmmm");
-                }
-
-
+                    startActivity(Intent.createChooser(emailIntent, getString(R.string.intent_title_send_feedback)));
+                }else
                 break;
         }
         return super.onOptionsItemSelected(item);

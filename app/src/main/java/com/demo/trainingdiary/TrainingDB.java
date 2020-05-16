@@ -23,6 +23,5 @@ public abstract class TrainingDB extends RoomDatabase {
         }
         return trainingDB;
     }
-
     public abstract TrainingDao trainingsDao();
 }

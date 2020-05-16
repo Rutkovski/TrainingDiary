@@ -4,8 +4,8 @@
 
     <com.demo.trainingdiary.NumberPickerPref
             android:key="key_number"
-            android:title="Длительность тренировки"
-            android:summary="Изменить длительность тренировки по умолчанию, мин"
+            android:title="@string/setting_duration"
+            android:summary="@string/setting_duration_default"
             android:defaultValue="30">
     </com.demo.trainingdiary.NumberPickerPref>
 

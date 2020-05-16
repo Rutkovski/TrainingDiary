@@ -37,6 +37,7 @@ public class TrainingAdapter extends RecyclerView.Adapter<TrainingAdapter.Traini
         notifyDataSetChanged();
     }
 
+
     @NonNull
     @Override
     public TrainingViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -52,14 +53,9 @@ public class TrainingAdapter extends RecyclerView.Adapter<TrainingAdapter.Traini
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(training.getTrainingDate());
 
-
         String trainingDateDayOfWeek = new SimpleDateFormat("E").format(calendar.getTime());
         String trainingDateDayOfMonth = new SimpleDateFormat("d").format(calendar.getTime());
         String trainingDateMonthAndYear = new SimpleDateFormat("M.yy").format(calendar.getTime());
-
-
-
-
 
         int hours = (int) (training.getDuration() / 3600000);
         int minute = (int) ((training.getDuration() % 3600000) / 60000);
@@ -77,17 +73,13 @@ public class TrainingAdapter extends RecyclerView.Adapter<TrainingAdapter.Traini
                 break;
         }
 
-
         holder.textViewTitle.setText(training.getTitle());
         holder.textViewDescription.setText(training.getDescription());
         holder.textViewLevel.setText(level);
         holder.textViewTrainingDateDayOfWeek.setText(trainingDateDayOfWeek);
-
         holder.textViewTrainingDateOfMonth.setText(trainingDateDayOfMonth);
         holder.textViewTrainingDateMonthAndYear.setText(trainingDateMonthAndYear);
-
         holder.textViewDuration.setText(duration);
-
     }
 
     @Override
@@ -117,7 +109,6 @@ public class TrainingAdapter extends RecyclerView.Adapter<TrainingAdapter.Traini
             textViewDescription = itemView.findViewById(R.id.textViewDescription);
             textViewLevel = itemView.findViewById(R.id.textViewlvl);
             textViewDuration = itemView.findViewById(R.id.textViewDuration);
-
             textViewTrainingDateDayOfWeek = itemView.findViewById(R.id.textViewTrainingDateDayOfWeek);
             textViewTrainingDateOfMonth = itemView.findViewById(R.id.textViewTrainingDateDayOfMonth);
             textViewTrainingDateMonthAndYear = itemView.findViewById(R.id.textViewTrainingDateMonthAndYear);
@@ -125,7 +116,6 @@ public class TrainingAdapter extends RecyclerView.Adapter<TrainingAdapter.Traini
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
 
                     if (clickTraining != null) {
                         clickTraining.onClickTraining(getAdapterPosition());
@@ -136,14 +126,12 @@ public class TrainingAdapter extends RecyclerView.Adapter<TrainingAdapter.Traini
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View view) {
-
                     if (clickTraining != null) {
                         clickTraining.onLongClickTraining(getAdapterPosition());
                     }
                     return true;
                 }
             });
-
         }
     }
 }

@@ -18,6 +18,19 @@
     <string name="confirmation_of_deletion">Подтверждение удаления</string>
     <string name="yes">да</string>
     <string name="no">нет</string>
+    <string name="title_list_training">Список тренировок</string>
+    <string name="title_add_training">Добавить тренировку</string>
+    <string name="title_settings">Настройки</string>
+    <string name="setting_duration">Длительность тренировки</string>
+    <string name="setting_duration_default">Изменить длительность тренировки по умолчанию, мин</string>
+    <string name="settings">Настройки</string>
+    <string name="menu_feedback">Написать разрабочику</string>
+    <string name="menu_about">О приложении</string>
+    <string name="add_training_duration">длительность:</string>
+    <string name="about_title_app">TrainingDiary</string>
+    <string name="about_app_version">version.0.3 15.05.2020</string>
+    <string name="feedback_email">mailto:rutkovski.dp@gmail.com</string>
+    <string name="intent_title_send_feedback">Send feedback</string>
     <string-array name="level_default">
         <item>Легко</item>
         <item>Сложно</item>

@@ -7,6 +7,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Dao
@@ -17,6 +18,9 @@ public interface TrainingDao {
 
     @Query("DELETE FROM trainings")
     void deleteAllTrainings();
+
+    @Query("SELECT id FROM trainings")
+    Training getAllId(ArrayList<Integer> ListId);
 
     @Insert
     void insertTraining(Training training);

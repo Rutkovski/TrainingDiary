@@ -7,18 +7,18 @@
     <item
         android:id="@+id/item_settings"
         android:orderInCategory="100"
-        android:title="Настройки"
+        android:title="@string/settings"
         app:showAsAction="never"/>
     <item
         android:id="@+id/item_contact_the_developer"
         android:orderInCategory="100"
-        android:title="Написать разрабочику"
+        android:title="@string/menu_feedback"
         app:showAsAction="never"/>
 
     <item
         android:id="@+id/item_about_app"
         android:orderInCategory="100"
-        android:title="О приложении"
+        android:title="@string/menu_about"
         app:showAsAction="never"/>
 
 

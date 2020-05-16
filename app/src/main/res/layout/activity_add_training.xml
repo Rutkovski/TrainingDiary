@@ -49,7 +49,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="8"
                             android:textSize="48sp"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -61,7 +60,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
-                            android:text="пятница"
                             android:textSize="18sp"
                             app:layout_constraintStart_toEndOf="@+id/textViewDayOfMounth"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -71,7 +69,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
-                            android:text="сент 2020"
                             android:textAllCaps="true"
                             android:textSize="24sp"
                             app:layout_constraintStart_toEndOf="@+id/textViewDayOfMounth"
@@ -98,7 +95,7 @@
                             android:id="@+id/textView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="длительность:"
+                            android:text="@string/add_training_duration"
                             android:textSize="18sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />

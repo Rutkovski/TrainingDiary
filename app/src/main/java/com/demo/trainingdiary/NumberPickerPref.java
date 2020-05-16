@@ -10,21 +10,17 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.NumberPicker;
 
+
 public class NumberPickerPref extends DialogPreference {
 
-
-
-    // allowed range
     public static final int MAX_VALUE = 180;
     public static final int MIN_VALUE = 10;
-    // enable or disable the 'circular behavior'
-    public static final boolean WRAP_SELECTOR_WHEEL = true;
 
+    public static final boolean WRAP_SELECTOR_WHEEL = true;
 
 
     private NumberPicker picker;
     private int value;
-
 
     public NumberPickerPref(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -35,28 +31,20 @@ public class NumberPickerPref extends DialogPreference {
     }
 
 
-
     @Override
     protected View onCreateDialogView() {
         FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         layoutParams.gravity = Gravity.CENTER;
 
-
-
         picker = new NumberPicker(getContext());
         picker.setLayoutParams(layoutParams);
-
-
 
         FrameLayout dialogView = new FrameLayout(getContext());
         dialogView.addView(picker);
 
-
-
         return dialogView;
     }
-
 
 
     @Override
@@ -65,7 +53,6 @@ public class NumberPickerPref extends DialogPreference {
         picker.setMinValue(MIN_VALUE);
         picker.setMaxValue(MAX_VALUE);
         picker.setWrapSelectorWheel(WRAP_SELECTOR_WHEEL);
-
         picker.setValue(getValue());
     }
 
@@ -89,7 +76,6 @@ public class NumberPickerPref extends DialogPreference {
     }
 
 
-
     @Override
     protected void onSetInitialValue(boolean restorePersistedValue, Object defaultValue) {
         setValue(restorePersistedValue ? getPersistedInt(MIN_VALUE) : (Integer) defaultValue);
@@ -97,12 +83,10 @@ public class NumberPickerPref extends DialogPreference {
 
 
 
-
     public void setValue(int value) {
         this.value = value;
         persistInt(this.value);
     }
-
 
 
     public int getValue() {

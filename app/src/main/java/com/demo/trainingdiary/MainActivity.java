@@ -26,24 +26,18 @@ public class MainActivity extends HomeActivity {
         setContentView(R.layout.activity_main);
         viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
         recyclerView = findViewById(R.id.recycler);
-
         adapter = new TrainingAdapter(trainings);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
         recyclerView.setAdapter(adapter);
         init();
 
-
-
-
         adapter.setClickTraining(new TrainingAdapter.ClickTraining() {
             @Override
             public void onClickTraining(int position) {
-
                 Intent intent = new Intent(getApplicationContext(), AddTrainingActivity.class);
                 long id = adapter.getTrainings().get(position).getId();
                 intent.putExtra("id", id);
                 startActivity(intent);
-
             }
 
             @Override
@@ -51,9 +45,7 @@ public class MainActivity extends HomeActivity {
                 warningRemove(position);
             }
         });
-
     }
-
 
     public void onClickAddTraining(View view) {
         Intent intent = new Intent(this, AddTrainingActivity.class);
@@ -70,18 +62,17 @@ public class MainActivity extends HomeActivity {
         });
     }
 
-    public void remove(int position){
+    public void remove(int position) {
         Training training = adapter.getTrainings().get(position);
         viewModel.deleteTraining(training);
     }
-    private void warningRemove(int position){
+
+    private void warningRemove(int position) {
         FragmentManager manager = getSupportFragmentManager();
         DialogRemove dialogRemove = new DialogRemove();
         Bundle bundlePosition = new Bundle();
-        bundlePosition.putInt("position",position);
+        bundlePosition.putInt("position", position);
         dialogRemove.setArguments(bundlePosition);
-        dialogRemove.show(manager,"dialog_remove");
+        dialogRemove.show(manager, "dialog_remove");
     }
-
-
 }
