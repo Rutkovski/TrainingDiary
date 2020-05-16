@@ -31,6 +31,7 @@
     <string name="about_app_version">version.0.3 15.05.2020</string>
     <string name="feedback_email">mailto:rutkovski.dp@gmail.com</string>
     <string name="intent_title_send_feedback">Send feedback</string>
+    <string name="item_training_title">Название тренировки</string>
     <string-array name="level_default">
         <item>Легко</item>
         <item>Сложно</item>

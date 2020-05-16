@@ -2,7 +2,6 @@
 
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp">
@@ -27,7 +26,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="ПН"
                 android:textSize="14sp" />
 
             <TextView
@@ -35,7 +33,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="28"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -44,7 +41,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="05.20"
                 android:textSize="14sp" />
         </LinearLayout>
 
@@ -54,7 +50,6 @@
             android:layout_height="wrap_content"
 
             android:layout_marginStart="8dp"
-            android:text="Название тренировки"
             android:textColor="@color/design_default_color_on_secondary"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -66,12 +61,10 @@
             android:id="@+id/textViewDescription"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-
             android:layout_marginStart="8dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="8dp"
             android:maxLines="2"
-            android:text="Описание тренировки 8 подтягиваний 9 отжиманий и т д dsfsdfsdfsdfsdfsdfsdfs и тому подобная ерунда которая может быть записано"
             android:textSize="12sp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
             app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +87,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Продолжительность: 30 мин"
                 android:textSize="12sp" />
 
             <TextView
@@ -103,8 +95,6 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="end"
-                android:paddingEnd="8dp"
-                android:text="Нагрузка: легко"
                 android:textSize="12sp" />
 
         </LinearLayout>
