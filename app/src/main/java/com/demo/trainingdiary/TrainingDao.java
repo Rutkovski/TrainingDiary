@@ -19,9 +19,6 @@ public interface TrainingDao {
     @Query("DELETE FROM trainings")
     void deleteAllTrainings();
 
-    @Query("SELECT id FROM trainings")
-    Training getAllId(ArrayList<Integer> ListId);
-
     @Insert
     void insertTraining(Training training);
 
